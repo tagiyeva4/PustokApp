@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hTbM5i5SMYbYxyqQZPVKZdRR1BLf1dCk4vS4uYb9K7g=",
+  "Hash": "ZtxDfxXbHM2JYdqhDScslEySHtVXc0J6QxIPtiqaToA=",
   "Source": "TemplatePustokApp",
   "BasePath": "_content/TemplatePustokApp",
   "Mode": "Default",
@@ -1934,6 +1934,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\custom.js"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "assets/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\plugins.js",

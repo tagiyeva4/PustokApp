@@ -18,17 +18,24 @@ namespace TemplatePustokApp.Controllers
         {
             HomeVm vm = new HomeVm();
 
+            vm.Sliders=_context.Sliders.ToList();
+
+            vm.Features=_context.Features.ToList();
+
             vm.NewBooks=_context.Books
+                .Include(b=>b.Author)
                 .Include(b=>b.BookImages.Where(x=>x.Status!=null))
                 .Where(x=>x.IsNew)
                 .ToList();
 
             vm.FeaturedBooks = _context.Books
+                .Include(b=>b.Author)
                .Include(b => b.BookImages.Where(x => x.Status != null))
                .Where(x => x.IsFeatured)
                .ToList();
 
-            vm.DiscountBooks = _context.Books
+            vm.DiscountBooks = _context.Books.
+                Include(b => b.Author)
                .Include(b => b.BookImages.Where(x => x.Status != null))
                .Where(x => x.DiscountPercentege>0)
                .ToList();

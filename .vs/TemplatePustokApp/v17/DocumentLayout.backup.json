@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\data\\pustokappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\data\\pustokappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\viewmodel\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\viewmodel\\homevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\shared\\modalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\shared\\modalpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,51 +23,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "TemplatePustokApp\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-23T00:56:14.85Z",
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\main.js*",
+              "RelativeToolTip": "TemplatePustokApp\\wwwroot\\assets\\js\\main.js*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-23T18:37:38.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PustokAppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Data\\PustokAppDbContext.cs",
-              "RelativeDocumentMoniker": "TemplatePustokApp\\Data\\PustokAppDbContext.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Data\\PustokAppDbContext.cs",
-              "RelativeToolTip": "TemplatePustokApp\\Data\\PustokAppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T23:08:49.514Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "TemplatePustokApp\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "TemplatePustokApp\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T22:47:01.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeVm.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\ViewModel\\HomeVm.cs",
-              "RelativeDocumentMoniker": "TemplatePustokApp\\ViewModel\\HomeVm.cs",
-              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\ViewModel\\HomeVm.cs",
-              "RelativeToolTip": "TemplatePustokApp\\ViewModel\\HomeVm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T22:45:42.245Z"
+              "Title": "ModalPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\ModalPartial.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Shared\\ModalPartial.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\ModalPartial.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Shared\\ModalPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-23T18:55:12.171Z",
+              "EditorCaption": ""
             }
           ]
         }
