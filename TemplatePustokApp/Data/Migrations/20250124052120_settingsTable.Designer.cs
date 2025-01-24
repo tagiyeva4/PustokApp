@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TemplatePustokApp.Data;
 
@@ -11,9 +12,11 @@ using TemplatePustokApp.Data;
 namespace TemplatePustokApp.Data.Migrations
 {
     [DbContext(typeof(PustokAppDbContext))]
-    partial class PustokAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250124052120_settingsTable")]
+    partial class settingsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

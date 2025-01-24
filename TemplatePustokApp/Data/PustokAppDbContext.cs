@@ -14,6 +14,7 @@ namespace TemplatePustokApp.Data
         public DbSet<Author> Authors { get; set; }
         public DbSet<BookImage> BookImages { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Setting> Settings { get; set; }
 
     }
 }
