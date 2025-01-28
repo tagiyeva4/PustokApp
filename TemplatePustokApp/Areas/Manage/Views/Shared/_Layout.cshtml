@@ -430,14 +430,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="~/manage/assets/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="~/manage/assets/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="~/manage/assets/js/demo/chart-area-demo.js"></script>
-    <script src="~/manage/assets/js/demo/chart-pie-demo.js"></script>
-
+    @RenderSection("scripts",false);
 </body>
 
 </html>
