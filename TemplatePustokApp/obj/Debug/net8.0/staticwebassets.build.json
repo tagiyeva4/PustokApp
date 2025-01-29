@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t6PBk15G/6YesC24MFVN5Cv1OaCDcZhRv66TMRa8opc=",
+  "Hash": "bESymHT4VDgY8/51mYu/s6S+nxkHr+D1udDWL9CXVCE=",
   "Source": "TemplatePustokApp",
   "BasePath": "_content/TemplatePustokApp",
   "Mode": "Default",
@@ -528,6 +528,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\fonts\\Material-Design-Iconic-Fontd1f1.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\bg-images\\54b03f02-d4cb-4c41-9da9-a6ce405aa83b.jpg",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "assets/image/bg-images/54b03f02-d4cb-4c41-9da9-a6ce405aa83b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\bg-images\\54b03f02-d4cb-4c41-9da9-a6ce405aa83b.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\bg-images\\best-seller-bg.jpg",
@@ -2200,6 +2219,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\assets\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\manage\\assets\\js\\main.js",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "manage/assets/js/main.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manage\\assets\\js\\main.js"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\manage\\assets\\js\\sb-admin-2.js",

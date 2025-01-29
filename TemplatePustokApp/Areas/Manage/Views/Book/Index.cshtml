@@ -1,0 +1,77 @@
+﻿@using TemplatePustokApp.Helpers
+@model PaginatedList<Book>
+@{
+    int count = (Model.CurrentPage - 1) * 2;
+}
+<div class="container">
+    <div class="row">
+        <a asp-action="create" class="btn btn-outline-success">Create</a>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Count</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Decription</th>
+                    <th scope="col">SalePrice</th>
+                    <th scope="col">CostPrice</th>
+                    <th scope="col">DiscountPercentage</th>
+                    <th scope="col">IsStock</th>
+                    <th scope="col">IsFetured</th>
+                    <th scope="col">IsNew</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">AuthorName</th>
+                    <th scope="col">GenreName</th>
+                    <th scope="col">Settings</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@(++count)</td>
+                        <td>
+                            <img width="150" height="150" src="~/assets/image/products/@book.BookImages.FirstOrDefault(bi=>bi.Status==true)" alt="Alternate Text" />
+                        </td>
+                        <td>@book.Name</td>
+                        <td>@book.Description</td>
+                        <td>@book.SalePrice</td>
+                        <td>@book.CostPrice</td>
+                        <td>@book.DiscountPercentege</td>
+                        <td>@book.IsStock</td>
+                        <td>@book.IsFeatured</td>
+                        <td>@book.IsNew</td>
+                        <td>@book.Rate</td>
+                        <td>@book.Author.Name</td>
+                        <td>@book.Genre.Name</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="edit" asp-route-id="@book.Id">Edit</a>
+                            <a class="btn btn-primary" asp-action="detail" asp-route-id="@book.Id">Detail</a>
+                            <a class="btn btn-primary" asp-action="delete" asp-route-id="@book.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-center">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item @(Model.HasPrevious?"":"disabled")">
+                    <a class="page-link" asp-action="index" asp-route-page="@(Model.CurrentPage-1)">Previous</a>
+                </li>
+                @for (int i = Model.Start; i <= Model.End; i++)
+                {
+                    <li class="page-item @(Model.CurrentPage==i?"disabled":"")">
+                        <a class="page-link" asp-action="index" asp-route-page="@i">@i<span class="sr-only">(current)</span></a>
+                    </li>
+                }
+                <li class="page-item @(Model.HasNext?"":"disabled")">
+                    <a class="page-link" asp-action="index" asp-route-page="@(Model.CurrentPage+1)">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

@@ -5,6 +5,7 @@
             <div class="form-group">
                 <label asp-for="Name"></label>
                 <input asp-for="Name" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Enter genre name">
+                <span class="text-danger" asp-validation-for="Name"></span>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

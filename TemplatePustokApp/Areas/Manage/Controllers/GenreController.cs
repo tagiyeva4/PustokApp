@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TemplatePustokApp.Data;
+using TemplatePustokApp.Helpers;
 using TemplatePustokApp.Models;
 
 namespace TemplatePustokApp.Areas.Manage.Controllers
@@ -16,9 +17,19 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             _context = context;
         }
 
-        public IActionResult Index(int page=1)
+        public IActionResult Index(int page=1,int take=2)
         {
-            return View(_context.Genres.Skip((page-1)*2).Take(2).Include(g=>g.Books).ToList());
+           var query=_context.Genres.Include(g=>g.Books);//icra olunmamis query
+            #region
+            //var count = query.Count();
+            //var data=query.Skip((page - 1) * take).Take(take).Include(g => g.Books).ToList();
+            //ViewBag.pageCount =Math.Ceiling((decimal)count / take);//yuxariya yuvarlaqlasdirir,decimal ile isleyir
+            //ViewBag.currentPage=page;
+            //ViewBag.hasNext = page < ViewBag.pageCount;
+            //ViewBag.hasPrevious = page > 1;
+            #endregion
+            PaginatedList<Genre>paginated=PaginatedList<Genre>.Create(query, take,page);
+            return View(paginated);
         }
         public IActionResult Create()
         {

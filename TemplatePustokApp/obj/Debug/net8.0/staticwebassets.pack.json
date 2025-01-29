@@ -109,6 +109,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900d41d.eot"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\bg-images\\54b03f02-d4cb-4c41-9da9-a6ce405aa83b.jpg",
+      "PackagePath": "staticwebassets\\assets\\image\\bg-images\\54b03f02-d4cb-4c41-9da9-a6ce405aa83b.jpg"
+    },
+    {
       "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\bg-images\\best-seller-bg.jpg",
       "PackagePath": "staticwebassets\\assets\\image\\bg-images\\best-seller-bg.jpg"
     },
@@ -459,6 +463,10 @@
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\manage\\assets\\js\\demo\\datatables-demo.js",
       "PackagePath": "staticwebassets\\manage\\assets\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\manage\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\manage\\assets\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\manage\\assets\\js\\sb-admin-2.js",

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TemplatePustokApp.Models
 {
@@ -16,8 +17,9 @@ namespace TemplatePustokApp.Models
         [Required]
         [MaxLength(100)]
         public string ButtonLink { get; set; }
-        [Required]
         public string Image { get; set; }
         public int Order { get; set; }
+        [NotMapped]//Sql-den ignore ucun
+        public IFormFile Photo{ get; set; }
     }
 }

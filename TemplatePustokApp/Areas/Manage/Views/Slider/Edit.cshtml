@@ -1,0 +1,44 @@
+﻿@model Slider
+<div class="container">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Title"></label>
+                <input asp-for="Title" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Title"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ButtonLink"></label>
+                <input asp-for="ButtonLink" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="ButtonLink"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ButtonText"></label>
+                <input asp-for="ButtonText" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="ButtonText"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo"></label>
+                <input asp-for="Photo" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Photo"></span>
+                <span>New Image: <img id="ImgPreview" style="display:none" width="100" height="100" src="" alt="" /></span>
+                <input asp-for="Image" type="hidden" />
+                <span>Old Image: <img src="~/assets/image/bg-images/@Model.Image" width="150" height="150" alt="" /></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order"></label>
+                <input asp-for="Order" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Order"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+}

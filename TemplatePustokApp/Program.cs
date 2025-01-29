@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TemplatePustokApp;
 using TemplatePustokApp.Data;
 using TemplatePustokApp.Services;
 
@@ -14,6 +15,7 @@ builder.Services.AddDbContext<PustokAppDbContext>(options =>
 });
 
 builder.Services.AddScoped<LayoutServices>();
+builder.Services.Configure<JwtServiceOption>(config.GetSection("Jwt"));
 
 var app = builder.Build();
 

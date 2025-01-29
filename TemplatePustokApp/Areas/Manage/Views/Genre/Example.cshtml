@@ -1,0 +1,56 @@
+﻿@model List<Genre>
+@{
+    int count = 0;
+}
+<div class="container">
+    <div class="row">
+        <a asp-action="create" class="btn btn-outline-success">Create</a>
+    </div>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Count</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">BooksCount</th>
+                    <th scope="col">CreatedDate</th>
+                    <th scope="col">Settings</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var genre in Model)
+                {
+                    <tr>
+                        <td>@(++count)</td>
+                        <td>@genre.Name</td>
+                        <td>@genre.Books.Count</td>
+                        <td>@genre.CreatedDate.ToString("dd,MMMM,yyyy")</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="edit" asp-route-id="@genre.Id">Edit</a>
+                            <a class="btn btn-primary" asp-action="detail" asp-route-id="@genre.Id">Detail</a>
+                            <a class="btn btn-primary" asp-action="delete" asp-route-id="@genre.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-center">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item @(ViewBag.hasPrevious?"":"disabled")">
+                    <a class="page-link" asp-action="index" asp-route-page="@(ViewBag.currentPage-1)">Previous</a>
+                </li>
+                @for (int i = 1; i <= ViewBag.pageCount; i++)
+                {
+                    <li class="page-item @(ViewBag.currentPage==i?"disabled":"")">
+                        <a class="page-link" asp-action="index" asp-route-page="@i">@i<span class="sr-only">(current)</span></a>
+                    </li>
+                }
+                <li class="page-item @( ViewBag.hasNext?"":"disabled")">
+                    <a class="page-link" asp-action="index" asp-route-page="@(ViewBag.currentPage+1)">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
