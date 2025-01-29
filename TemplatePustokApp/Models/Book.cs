@@ -24,6 +24,12 @@ namespace TemplatePustokApp.Models
         public int GenreId { get; set; }
         public Genre Genre { get; set; }
         public List<BookImage> BookImages { get; set; }
+        [NotMapped]
+        public IFormFile[] Photos{ get; set; }
+        public Book()
+        {
+            BookImages = new List<BookImage>();
+        }
 
     }
 }

@@ -102,7 +102,7 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             _context.Genres.Remove(genre);
             _context.SaveChanges();
 
-            return RedirectToAction("Index");
+            return Ok();
         }
         public IActionResult Detail(int? id)
         {

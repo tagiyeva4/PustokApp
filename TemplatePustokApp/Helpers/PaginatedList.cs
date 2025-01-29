@@ -8,8 +8,8 @@ namespace TemplatePustokApp.Helpers
         public int CurrentPage { get; set; }
         public bool HasNext {  get; set; }
         public bool HasPrevious { get; set; }
-        public int Start { get; set; } = 1;
-        public int End { get; set; } = 1;
+        public int Start { get; set; } 
+        public int End { get; set; } 
         public PaginatedList(List<T>items,int pageCount,int page)
         {
             this.AddRange(items);
@@ -19,8 +19,6 @@ namespace TemplatePustokApp.Helpers
             HasPrevious = CurrentPage > 1;
             int start = CurrentPage - 2;
             int end=CurrentPage+2;
-            if (PageCount > 5)
-            {
                 if (start <= 0)
                 {
                     end = end - (start - 1);
@@ -33,8 +31,6 @@ namespace TemplatePustokApp.Helpers
                 }
                 Start = start;
                 End = end;
-            }
-
         }
         public static PaginatedList<T> Create(IQueryable<T>query,int take,int page)
         {

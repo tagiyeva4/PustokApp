@@ -1,0 +1,82 @@
+﻿@model Book
+<div class="container">
+    <div class="row">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description"></label>
+                <input asp-for="Description" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Description"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalePrice"></label>
+                <input asp-for="SalePrice" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="SalePrice"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CostPrice"></label>
+                <input asp-for="CostPrice" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="CostPrice"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsFeatured"></label>
+                <input asp-for="IsFeatured" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="IsFeatured"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsNew"></label>
+                <input asp-for="IsNew" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="IsNew"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsStock"></label>
+                <input asp-for="IsStock" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="IsStock"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rate"></label>
+                <input asp-for="Rate" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Rate"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photos"></label>
+                <input asp-for="Photos" class="form-control" aria-describedby="emailHelp">
+                <span class="text-danger" asp-validation-for="Photos"></span>
+            </div>
+            <div class="form-group">
+                <select class="form-select" asp-for="AuthorId">
+                    <option disabled>Select Author Name</option>
+                    @foreach(var author in ViewBag.Authors)
+                    {
+                        <option value="@author.Id">@author.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-select" asp-for="GenreId">
+                    <option disabled>Select Genre</option>
+                    @foreach (var genre in ViewBag.Genres)
+                    {
+                        <option value="@genre.Id">@genre.Name</option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+@section scripts {
+    @await Html.PartialAsync("_ValidationPartial")
+}
+
+
+@* <div class="form-group">
+    <label asp-for="Photo"></label>
+    <input asp-for="Photo" class="form-control" aria-describedby="emailHelp">
+    <img id="ImgPreview" style="display:none" width="150" height="150" src="" alt="" />
+    <span class="text-danger" asp-validation-for="Photo"></span>
+</div> *@

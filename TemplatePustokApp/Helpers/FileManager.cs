@@ -5,8 +5,8 @@
         public static string SaveImage(this IFormFile file,string path,string folder)
         {
             string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
-            string fullPath = Path.Combine(path, fileName);
-            using FileStream fileStream = new FileStream(path, FileMode.Create);//using de yaziriq cunki isi bitenden sonra dispose elesin
+            string fullPath = Path.Combine(path,folder,fileName);
+            using FileStream fileStream = new FileStream(fullPath, FileMode.Create);//using de yaziriq cunki isi bitenden sonra dispose elesin
             file.CopyTo(fileStream);
             return fileName;
 
