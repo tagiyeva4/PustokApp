@@ -9,6 +9,20 @@
         uploadimg.readAsDataURL(file);
     });
 
+    $("#Photos").change(function (ev) {
+        let files = ev.target.files;
+        for (var i = 0; i < files.length; i++) {
+            var uploadimg = new FileReader();
+            let img = $("<img>");
+            img.css({ width: "120", height: "120" });
+            uploadimg.onload = function (displayimg) {
+                img.attr('src', displayimg.target.result)
+            }
+            uploadimg.readAsDataURL(files[i]);
+            $(".bookImagesPreview").append(img);
+        }
+    });
+
     $(".deleteGenreButton").click(function (ev) {
         ev.preventDefault();
         let url = $(this).attr("href");

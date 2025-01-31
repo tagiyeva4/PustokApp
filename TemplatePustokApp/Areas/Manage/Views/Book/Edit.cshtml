@@ -22,7 +22,7 @@
                 <input asp-for="CostPrice" class="form-control" aria-describedby="emailHelp">
                 <span class="text-danger" asp-validation-for="CostPrice"></span>
             </div>
-           <div class="row">
+            <div class="row">
                 <div class="form-group m-3">
                     <label asp-for="IsFeatured"></label>
                     <input asp-for="IsFeatured" class="form-control" aria-describedby="emailHelp">
@@ -38,7 +38,7 @@
                     <input asp-for="IsStock" class="form-control" aria-describedby="emailHelp">
                     <span class="text-danger" asp-validation-for="IsStock"></span>
                 </div>
-           </div>
+            </div>
             <div class="form-group">
                 <label asp-for="Rate"></label>
                 <input asp-for="Rate" class="form-control" aria-describedby="emailHelp">
@@ -47,42 +47,37 @@
             <div class="form-group">
                 <label asp-for="Photos"></label>
                 <input asp-for="Photos" class="form-control" aria-describedby="emailHelp">
+                <span>Old Images</span>
+                @foreach (var image in Model.BookImages)
+                {
+                    @if (image.Status != true)
+                    {
+                        <a class="btn btn-outline-primary" asp-action="DeleteBookImage" asp-route-id="@image.Id"><i class="fa-solid fa-trash-can"></i></a>
+                        <a class="btn btn-outline-primary" asp-action="SetMainImage" asp-route-id="@image.Id"><i class="fa-regular fa-file-image"></i></a>
+                    }
+                    <img width="150" height="150" src="~/assets/image/products/@image.Name" alt="Alternate Text" />
+                   
+                }
+                <div class="bookImagesPreview">
+                   
+                </div>
                 <span class="text-danger" asp-validation-for="Photos"></span>
             </div>
-           @*<div class="form-group">
-                <label asp-for="MainImage"></label>
-                <input asp-for="MainImage" class="form-control" aria-describedby="emailHelp">
-                <span class="text-danger" asp-validation-for="MainImage"></span>
-            </div> *@
             <div class="form-group">
-                <span>Select Author Name</span>
-                <select class="form-select" asp-for="AuthorId">
-                    <option disabled>Select Author Name</option>
-                    @foreach(var author in ViewBag.Authors)
-                    {
-                        <option value="@author.Id">@author.Name</option>
-                    }
+                <span>Author Name</span>
+                <select class="form-select" asp-for="AuthorId" asp-items=' new SelectList(ViewBag.Authors,"Id","Name")'>
                 </select>
             </div>
             <div class="form-group">
-                <span>Select Genre Name</span>
-                <select class="form-select" asp-for="GenreId">
-                    <option disabled>Select Genre</option>
-                    @foreach (var genre in ViewBag.Genres)
-                    {
-                        <option value="@genre.Id">@genre.Name</option>
-                    }
+                <span>Genre Name</span>
+                <select class="form-select" asp-for="GenreId" asp-items=' new SelectList(ViewBag.Genres,"Id","Name")'>
                 </select>
             </div>
             <div class="form-group">
-                <span>Select Tags</span>
-                <select class="form-select" asp-for="TagIds">
-                    <option disabled>Select Tags</option>
-                    @foreach (var tag in ViewBag.Tags)
-                    {
-                        <option value="@tag.Id">@tag.Name</option>
-                    }
-                </select>
+                @foreach (var tag in ViewBag.Tags)
+                {
+                    <input type="checkbox" @(Model.BookTags.Any(b => b.TagId == tag.Id) ? "checked" : "") value="" /> @tag.Name
+                }
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
@@ -91,11 +86,25 @@
 @section scripts {
     @await Html.PartialAsync("_ValidationPartial")
 }
-
-
 @* <div class="form-group">
-    <label asp-for="Photo"></label>
-    <input asp-for="Photo" class="form-control" aria-describedby="emailHelp">
-    <img id="ImgPreview" style="display:none" width="150" height="150" src="" alt="" />
-    <span class="text-danger" asp-validation-for="Photo"></span>
-</div> *@
+            <span>Tags</span>
+            <select class="form-select" asp-for="TagIds">
+            @foreach (var tag in ViewBag.Tags)
+            {
+            @if (Model.BookTags.Any(b=>b.TagId==tag.Id))
+            {
+            <option selected value="@tag.Id">@tag.Name</option>
+            }
+            else
+            {
+            <option value = "@tag.Id" > @tag.Name </option >
+            }
+            }
+            </select>
+            </div>
+            <div class="form-group">
+                <span>Tags</span>
+                <select class="form-select" asp-for="TagIds" asp-items=' new SelectList(ViewBag.Tags,"Id","Name")'>
+
+                </select>
+            </div> *@

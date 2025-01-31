@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W2BDFQSi+oHMXHxvvJAIn+mIaj/OK1kghpff1qzeBmQ=",
+  "Hash": "L/h/6MMkCy2HXLAljLfB653q0YKvMXYk70Lb14Hj5ls=",
   "Source": "TemplatePustokApp",
   "BasePath": "_content/TemplatePustokApp",
   "Mode": "Default",
@@ -1575,6 +1575,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\image\\products\\6f2d5296-0301-4310-91c6-314d471febd7.jpg"
     },
     {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\products\\7439e717-31da-4110-a3b8-303e10fa5f2e.jpg",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "assets/image/products/7439e717-31da-4110-a3b8-303e10fa5f2e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\products\\7439e717-31da-4110-a3b8-303e10fa5f2e.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\products\\a2ed7be5-6fc1-4255-80fe-3be960d8b583.jpg",
       "SourceId": "TemplatePustokApp",
       "SourceType": "Discovered",
@@ -1611,6 +1630,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\image\\products\\cart-product-1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\products\\fa0e7c30-3db6-48a5-b20e-6ce212139187.jpg",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "assets/image/products/fa0e7c30-3db6-48a5-b20e-6ce212139187.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\image\\products\\fa0e7c30-3db6-48a5-b20e-6ce212139187.jpg"
     },
     {
       "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\image\\products\\product-1.jpg",

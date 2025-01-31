@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using TemplatePustokApp.Attributes;
 
 namespace TemplatePustokApp.Models
 {
@@ -25,10 +26,18 @@ namespace TemplatePustokApp.Models
         public Genre Genre { get; set; }
         public List<BookImage> BookImages { get; set; }
         [NotMapped]
+        [MaxSize(2*1024*1024)]
+        [AllowedTypeAttribute("image/jpeg", "image/png")]
         public IFormFile[] Photos{ get; set; }
+        //[NotMapped]
+        //public IFormFile MainImage { get; set; }
+        public List<BookTag> BookTags { get; set; }
+        [NotMapped]
+        public List<int> TagIds { get; set; }
         public Book()
         {
             BookImages = new List<BookImage>();
+            BookTags = new List<BookTag>();
         }
 
     }

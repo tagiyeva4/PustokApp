@@ -49,19 +49,19 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
                 return View();
             }
             var file = slider.Photo;
-            #region if in icerisi
+            #region dataannotaion ile yazdigimiz 
             //file.ContentType != "image/jpeg" && file.ContentType != "image/png"file.ContentType != "image/jpeg" && file.ContentType != "image/png"
+            //if (!file.CheckType(new string[] { "image/jpeg", "image/png" }))
+            //{
+            //    ModelState.AddModelError("Photo", "File type is wrong");
+            //    return View();
+            //}
+            //if (file.Length > 2 * 1024 * 1024)
+            //{
+            //    ModelState.AddModelError("Photo", "File legnth must be less than 2 MB");
+            //    return View();
+            //}
             #endregion
-            if (!file.CheckType(new string[] { "image/jpeg", "image/png" }))
-            {
-                ModelState.AddModelError("Photo", "File type is wrong");
-                return View();
-            }
-            if (file.Length > 2 * 1024 * 1024)
-            {
-                ModelState.AddModelError("Photo", "File legnth must be less than 2 MB");
-                return View();
-            }
             if (_context.Sliders.Any(s => s.Title.Trim().ToLower() == slider.Title.Trim().ToLower()))
             {
                 ModelState.AddModelError("Title", "This slider already exist");//xeta yalniz backendden qayidir
@@ -106,16 +106,6 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             string oldImage = existSlider.Image;
             if (file != null)
             {
-                if (!file.CheckType(new string[] { "image/jpeg", "image/png" }))
-                {
-                    ModelState.AddModelError("Photo", "File type is wrong");
-                    return View();
-                }
-                if (file.Length>2*1024*1024)
-                {
-                    ModelState.AddModelError("Photo", "File legnth must be less than 2 MB");
-                    return View();
-                }
                 existSlider.Image = file.SaveImage(_env.WebRootPath, "assets/image/bg-images");
                 var deletedImagePath = Path.Combine(_env.WebRootPath, "assets/image/bg-images", oldImage);
                 if (!FileManager.DeleteFile(deletedImagePath))
@@ -149,7 +139,6 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index");
         }
-
 
         #region ReadData configuration istifade etmekle 1
         //public IActionResult ReadData()
