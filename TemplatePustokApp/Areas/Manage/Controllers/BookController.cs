@@ -193,13 +193,19 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             {
                 return NotFound();
             }
-            if (!_context.Genres.Any(g => g.Id == book.GenreId&&book.GenreId==existbook.GenreId))
+            if (existbook.GenreId != book.GenreId)
             {
-                ModelState.AddModelError("GenreId", "Genre not found");
+                if (!_context.Genres.Any(g => g.Id == book.GenreId))
+                {
+                    ModelState.AddModelError("GenreId", "Genre not found");
+                }
             }
-            if (!_context.Authors.Any(a => a.Id == book.AuthorId&&book.AuthorId==existbook.AuthorId))
+            if (existbook.AuthorId!=book.AuthorId)
             {
-                ModelState.AddModelError("AuthorId", "Author not found");
+                if (!_context.Authors.Any(a => a.Id == book.AuthorId))
+                {
+                    ModelState.AddModelError("AuthorId", "Author not found");
+                }
             }
             var files = book.Photos;
             if (files!=null)
@@ -212,7 +218,7 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
                 }
             }
             List<BookTag> bookTags = new List<BookTag>();
-            foreach (var tagId in book.TagIds)
+            foreach (var tagId in book.TagIds.ToList())
             {
                 if (!_context.Tags.Any(t => t.Id == tagId))
                 {

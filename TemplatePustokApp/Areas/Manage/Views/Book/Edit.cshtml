@@ -73,11 +73,24 @@
                 <select class="form-select" asp-for="GenreId" asp-items=' new SelectList(ViewBag.Genres,"Id","Name")'>
                 </select>
             </div>
+       @*<div class="form-group">
+                <span>select tags</span>
+                <select class="form-select" asp-for="tagids">
+                    <option disabled>select tags</option>
+                    @foreach (var tag in viewbag.tags)
+                    {
+                        <option @(model.booktags.any(b => b.tagid == tag.id) ? "selected" : "") value="@tag.id">@tag.name</option>
+                    }
+                </select>
+         </div>  *@
             <div class="form-group">
-                @foreach (var tag in ViewBag.Tags)
+                <select asp-for="TagIds">
+
+                @foreach (Tag tag in ViewBag.Tags)
                 {
-                    <input type="checkbox" @(Model.BookTags.Any(b => b.TagId == tag.Id) ? "checked" : "") value="" /> @tag.Name
+                   <option value="@tag.Id">@tag.Name</option>
                 }
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
