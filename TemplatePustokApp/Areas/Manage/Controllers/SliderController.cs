@@ -1,4 +1,5 @@
 ﻿using Humanizer.Localisation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using TemplatePustokApp.Data;
@@ -8,6 +9,7 @@ using TemplatePustokApp.Models;
 namespace TemplatePustokApp.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize]
     public class SliderController : Controller
     {
         private readonly PustokAppDbContext _context;

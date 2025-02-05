@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TemplatePustokApp.Models;
 
 namespace TemplatePustokApp.Data
 {
-    public class PustokAppDbContext : DbContext
+    public class PustokAppDbContext : IdentityDbContext<AppUser>
     {
         public PustokAppDbContext(DbContextOptions options) : base(options)
         {
@@ -17,6 +18,7 @@ namespace TemplatePustokApp.Data
         public DbSet<Setting> Settings { get; set; }
         public DbSet<BookTag> BookTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
     }
 }

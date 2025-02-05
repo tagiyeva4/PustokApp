@@ -1,0 +1,42 @@
+﻿@model UserLoginVm
+<main class="page-section inner-page-sec-padding-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="mx-auto col-sm-12 col-md-12 col-xs-12 col-lg-6 mb--30 mb-lg--0">
+				<!-- Login Form s-->
+				<form action="#">
+					<div class="login-form">
+						<h4 class="login-title">New Customer</h4>
+						<p><span class="font-weight-bold">I am a new customer</span></p>
+						<div class="row">
+							<div class="col-md-12 col-12 mb--15">
+								<label asp-for="UserNameOrEmail"></label>
+								<input class="mb-0 form-control" asp-for="UserNameOrEmail"
+									   placeholder="Enter your username or email...">
+								<span class="text-danger" asp-validation-for="UserNameOrEmail"></span>
+							</div>
+							<div class="col-lg-6 mb--20">
+								<label asp-for="Password"></label>
+								<input class="mb-0 form-control" asp-for="Password" placeholder="Enter your password">
+								<span class="text-danger" asp-validation-for="Password"></span>
+							</div>
+							<div class="col-md-12 m-1">
+								<label asp-for="RememberMe"></label>
+								<input asp-for="RememberMe" />
+							</div>
+							<div class="col-md-12">
+								<button type="submit" class="btn btn-outlined">Log in</button>
+								<a class="m-2" asp-action="register">Register</a>
+							</div>
+							<div class="text-danger" asp-validation-summary="ModelOnly"></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</main>
+@section scripts {
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}

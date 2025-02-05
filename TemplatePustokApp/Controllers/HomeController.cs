@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TemplatePustokApp.Data;
+using TemplatePustokApp.Models;
 using TemplatePustokApp.ViewModel;
 
 namespace TemplatePustokApp.Controllers
@@ -16,6 +17,9 @@ namespace TemplatePustokApp.Controllers
 
         public IActionResult Index()
         {
+            AppUser appUser = new();
+            
+
             HomeVm vm = new HomeVm();
 
             vm.Sliders=_context.Sliders.ToList();
