@@ -7897,6 +7897,14 @@
       "PackagePath": "staticwebassets\\manage\\assets\\vendor\\jquery\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\templates\\emailconfirm.html",
+      "PackagePath": "staticwebassets\\templates\\emailconfirm.html"
+    },
+    {
+      "Id": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\templates\\resetpassword.html",
+      "PackagePath": "staticwebassets\\templates\\resetpassword.html"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TemplatePustokApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O4LNbopi24/GVIpOXfD9ikoUFaOdBTr9lcHQPHpT2zY=",
+  "Hash": "GoF1RuFGaar+RW43YNCu006zP2otuOuqBl4pBcvOh9s=",
   "Source": "TemplatePustokApp",
   "BasePath": "_content/TemplatePustokApp",
   "Mode": "Default",
@@ -37521,6 +37521,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\manage\\assets\\vendor\\jquery-easing\\jquery.easing.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\templates\\emailconfirm.html",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "templates/emailconfirm.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\emailconfirm.html"
+    },
+    {
+      "Identity": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\templates\\resetpassword.html",
+      "SourceId": "TemplatePustokApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\",
+      "BasePath": "_content/TemplatePustokApp",
+      "RelativePath": "templates/resetpassword.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\templates\\resetpassword.html"
     }
   ]
 }

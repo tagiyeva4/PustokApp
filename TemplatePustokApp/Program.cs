@@ -18,6 +18,7 @@ builder.Services.AddDbContext<PustokAppDbContext>(options =>
 
 builder.Services.AddScoped<LayoutServices>();
 builder.Services.Configure<JwtServiceOption>(config.GetSection("Jwt"));
+builder.Services.AddScoped<EmailService>();
 builder.Services.AddSession();//vaxt verilmir ,brauzeri baglayanda melumatlar silinir
 //builder.Services.AddSession(opt =>
 //{
@@ -33,11 +34,12 @@ builder.Services.AddIdentity<AppUser,IdentityRole>(opt=>
     opt.Password.RequiredLength = 6;
 
     opt.User.RequireUniqueEmail = true;
+    opt.SignIn.RequireConfirmedEmail = true;//login oan userin email confirm deyilse login ola bilmesin
 
     opt.Lockout.MaxFailedAccessAttempts = 3;
     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
     opt.Lockout.AllowedForNewUsers = true;
-}).AddEntityFrameworkStores<PustokAppDbContext>();
+}).AddEntityFrameworkStores<PustokAppDbContext>().AddDefaultTokenProviders();
 
 var app = builder.Build();
 

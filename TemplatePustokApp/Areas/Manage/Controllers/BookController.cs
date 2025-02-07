@@ -9,7 +9,7 @@ using TemplatePustokApp.Models;
 namespace TemplatePustokApp.Areas.Manage.Controllers
 {
     [Area("Manage")]
-    [Authorize]
+    [Authorize(Roles ="admin,superadmin")]
     public class BookController : Controller
     {
         private readonly PustokAppDbContext _context;

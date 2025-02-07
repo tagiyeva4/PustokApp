@@ -9,8 +9,8 @@ using TemplatePustokApp.Models;
 namespace TemplatePustokApp.Areas.Manage.Controllers
 {
     [Area("Manage")]
-    [Authorize]
-    public class GenreController : Controller
+	[Authorize(Roles = "admin,superadmin")]
+	public class GenreController : Controller
     {
         private readonly PustokAppDbContext _context;
 
