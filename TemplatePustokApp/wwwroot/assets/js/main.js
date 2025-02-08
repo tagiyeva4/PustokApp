@@ -44,6 +44,12 @@
 
     })
 
+    $(document).ready(function () {
+        function removeMessage() {
+            $(".alert.alert-success").remove();
+        }
+        setTimeout(removeMessage, 5000);
+    });
    
     
 })

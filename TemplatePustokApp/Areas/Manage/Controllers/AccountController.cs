@@ -45,7 +45,7 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(AdminLoginVm adminLoginVm)
+        public async Task<IActionResult> Login(AdminLoginVm adminLoginVm, string returnUrl)
         {
             if (!ModelState.IsValid) return View();
             var user=await _userManager.FindByNameAsync(adminLoginVm.UserName);
@@ -63,7 +63,7 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
             await _signInManager.SignInAsync(user,false);
 
             //return RedirectToAction("Index","Dashboard", new {area="manage"});//user panelden admin panele redirect etmek ucundur
-            return RedirectToAction("Index", "Dashboard");
+            return returnUrl!=null?Redirect(returnUrl): RedirectToAction("Index", "Dashboard");
 
 		}
         public async Task<IActionResult> GetUser()
@@ -77,5 +77,9 @@ namespace TemplatePustokApp.Areas.Manage.Controllers
 			await _signInManager.SignOutAsync();
 			return RedirectToAction("Login","Account");
 		}
+        //public IActionResult test()
+        //{
+        //    return RedirectToAction("Login","Account",Url.Action("Detail"));
+        //}
 	}
 }

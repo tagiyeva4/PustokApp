@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using TemplatePustokApp;
 using TemplatePustokApp.Data;
 using TemplatePustokApp.Models;
@@ -40,6 +41,25 @@ builder.Services.AddIdentity<AppUser,IdentityRole>(opt=>
     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
     opt.Lockout.AllowedForNewUsers = true;
 }).AddEntityFrameworkStores<PustokAppDbContext>().AddDefaultTokenProviders();
+builder.Services.ConfigureApplicationCookie(opt =>
+{
+    opt.Events.OnRedirectToLogin = opt.Events.OnRedirectToAccessDenied = context =>
+    {
+        var uri=new Uri(context.RedirectUri);
+        if (context.Request.Path.Value.ToLower().StartsWith("/manage"))
+        {
+            context.Response.Redirect("/manage/account/login"+uri.Query);
+		}
+        else
+        {
+            context.Response.Redirect("/account/login"+ uri.Query);
+
+		}
+        return Task.CompletedTask;
+    };
+  
+});
+
 
 var app = builder.Build();
 

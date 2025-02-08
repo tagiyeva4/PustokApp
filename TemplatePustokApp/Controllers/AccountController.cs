@@ -11,6 +11,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using MailKit.Security;
 using MailKit.Net.Smtp;
 using TemplatePustokApp.Services;
+using Microsoft.Extensions.Options;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using NuGet.Common;
 
 namespace TemplatePustokApp.Controllers
 {
@@ -20,14 +23,14 @@ namespace TemplatePustokApp.Controllers
 		private readonly SignInManager<AppUser> _signInManager;
 		private readonly EmailService _emailService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, EmailService emailService)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _emailService = emailService;
-        }
+		public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, EmailService emailService)
+		{
+			_userManager = userManager;
+			_signInManager = signInManager;
+			_emailService = emailService;
+		}
 
-        public IActionResult Register()
+		public IActionResult Register()
 		{
 			return View();
 		}
@@ -79,11 +82,11 @@ namespace TemplatePustokApp.Controllers
 
 			return RedirectToAction("Login");
 		}
-		public async Task<IActionResult> VerifyEmail(string email,string token)
+		public async Task<IActionResult> VerifyEmail(string email, string token)
 		{
-			var user=await _userManager.FindByEmailAsync(email);
-			if (user == null||!await _userManager.IsInRoleAsync(user,"member")) return RedirectToAction("notfound", "error");
-			await _userManager.ConfirmEmailAsync(user,token);
+			var user = await _userManager.FindByEmailAsync(email);
+			if (user == null || !await _userManager.IsInRoleAsync(user, "member")) return RedirectToAction("notfound", "error");
+			await _userManager.ConfirmEmailAsync(user, token);
 			return RedirectToAction("Login");
 		}
 
@@ -93,12 +96,12 @@ namespace TemplatePustokApp.Controllers
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Login(UserLoginVm userLoginVm)
+		public async Task<IActionResult> Login(UserLoginVm userLoginVm,string returnUrl)
 		{
-			TempData["Succsess"] = "Email successfully sended to" ;
+			TempData["Succsess"] = "Email successfully sended to";
 			if (!ModelState.IsValid) return View();
 			AppUser user = await _userManager.FindByNameAsync(userLoginVm.UserNameOrEmail);
-			if (user == null || !await _userManager.IsInRoleAsync(user,"member"))
+			if (user == null || !await _userManager.IsInRoleAsync(user, "member"))
 			{
 				user = await _userManager.FindByEmailAsync(userLoginVm.UserNameOrEmail);
 				if (user == null)
@@ -133,16 +136,16 @@ namespace TemplatePustokApp.Controllers
 				return View();
 			}
 
-			return RedirectToAction("Index", "Home");
+			return returnUrl!=null? Redirect(returnUrl): RedirectToAction("Index", "Home");
 		}
-		[Authorize(Roles ="member")]
+		[Authorize(Roles = "member")]
 		public async Task<IActionResult> LogOut()
 		{
 			await _signInManager.SignOutAsync();
 			return RedirectToAction("Login");
 		}
 		[Authorize(Roles = "member")]//ancaq user olarsa gele biler,bu action a
-		public async Task<IActionResult> Profile(string tab="dashboard")
+		public async Task<IActionResult> Profile(string tab = "dashboard")
 		{
 			ViewBag.Tab = tab;
 			var user = await _userManager.GetUserAsync(User);
@@ -165,8 +168,8 @@ namespace TemplatePustokApp.Controllers
 		[Authorize(Roles = "member")]
 		public async Task<IActionResult> Profile(UserProfileUpdateVm userProfileUpdateVm, string tab = "accountdetail")
 		{
-			ViewBag.Tab=tab;
-			UserProfileVm userProfileVm = new ();
+			ViewBag.Tab = tab;
+			UserProfileVm userProfileVm = new();
 			userProfileVm.UserProfileUpdateVm = userProfileUpdateVm;
 
 			if (!ModelState.IsValid) return View(userProfileVm);
@@ -179,14 +182,14 @@ namespace TemplatePustokApp.Controllers
 			user.UserName = userProfileUpdateVm.UserName;
 			user.Email = userProfileUpdateVm.Email;
 
-			if(userProfileUpdateVm.NewPassword!=null)
+			if (userProfileUpdateVm.NewPassword != null)
 			{
-				if(userProfileUpdateVm.CurrentPasword == null)
+				if (userProfileUpdateVm.CurrentPasword == null)
 				{
 					ModelState.AddModelError("CurrentPasword", "CurrentPasword is required");
 					return View(userProfileVm);
 				}
-			    var response= await _userManager.ChangePasswordAsync(user,userProfileUpdateVm.CurrentPasword,userProfileUpdateVm.NewPassword);
+				var response = await _userManager.ChangePasswordAsync(user, userProfileUpdateVm.CurrentPasword, userProfileUpdateVm.NewPassword);
 				if (!response.Succeeded)
 				{
 					foreach (var error in response.Errors)
@@ -206,7 +209,7 @@ namespace TemplatePustokApp.Controllers
 				return View(userProfileVm);
 			}
 			await _signInManager.SignInAsync(user, true);
-			return RedirectToAction("Index","Home");
+			return RedirectToAction("Index", "Home");
 		}
 		public IActionResult ForgotPassword()
 		{
@@ -216,18 +219,18 @@ namespace TemplatePustokApp.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> ForgotPassword(ForgotPasswordVm forgotPasswordVm)
 		{
-			if(!ModelState.IsValid) return View();
+			if (!ModelState.IsValid) return View();
 			var user = await _userManager.FindByEmailAsync(forgotPasswordVm.Email);
-			if (user == null || !await _userManager.IsInRoleAsync(user, "member")) return RedirectToAction("notfound","error");
-			var token=await _userManager.GeneratePasswordResetTokenAsync(user);
-			var url = Url.Action("ResetPassword", "Account", new {email=user.Email, token },Request.Scheme);
+			if (user == null || !await _userManager.IsInRoleAsync(user, "member")) return RedirectToAction("notfound", "error");
+			var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+			var url = Url.Action("VerifyPassword", "Account", new { email = user.Email, token }, Request.Scheme);
 
 			//send email
-            using StreamReader reader = new StreamReader("wwwroot/templates/resetpassword.html");
-            var body = reader.ReadToEnd();
-            body = body.Replace("{{{url}}}", url);
-            body = body.Replace("{{{username}}}", user.UserName);
-			_emailService.SendEmail(user.Email, "Reset Password for Login",body);
+			using StreamReader reader = new StreamReader("wwwroot/templates/resetpassword.html");
+			var body = reader.ReadToEnd();
+			body = body.Replace("{{{url}}}", url);
+			body = body.Replace("{{{username}}}", user.UserName);
+			_emailService.SendEmail(user.Email, "Reset Password for Login", body);
 
 			#region create email message
 			//         // create email message
@@ -249,9 +252,23 @@ namespace TemplatePustokApp.Controllers
 			//         smtp.Disconnect(true);
 			#endregion
 
-			TempData["Succsess"] = "Email successfully sended to"+ user.Email;
-            return View();
+			TempData["Succsess"] = "Email successfully sended to " + user.Email;
+			return View();
 		}
+		public async Task<IActionResult> VerifyPassword(string token, string email)
+		{
+			TempData["token"] = token;
+			TempData["email"] = email;
+			var user = await _userManager.FindByEmailAsync(email);
+			if (user == null || !await _userManager.IsInRoleAsync(user, "member")) return RedirectToAction("notfound", "error");
+			if (!await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token))
+			{
+				return RedirectToAction("notfound", "error");
+			}
+
+			return RedirectToAction("ResetPassword");
+		}
+
 		public IActionResult ResetPassword()
 		{
 			return View();
@@ -260,12 +277,20 @@ namespace TemplatePustokApp.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> ResetPassword(PasswordResetVm passwordResetVm)
 		{
+			TempData["token"] = passwordResetVm.Token;
+			TempData["email"] = passwordResetVm.Email;
 			if (!ModelState.IsValid) return View();
 			var user = await _userManager.FindByEmailAsync(passwordResetVm.Email);
 
 			if (user == null || !await _userManager.IsInRoleAsync(user, "member")) return View();
-			
-			var result=await _userManager.ResetPasswordAsync(user,passwordResetVm.Token,passwordResetVm.Password);
+
+			if (!await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", passwordResetVm.Token))
+			{
+				return RedirectToAction("notfound", "error");
+			}
+
+			var result = await _userManager.ResetPasswordAsync(user, passwordResetVm.Token, passwordResetVm.Password);
+
 			if (!result.Succeeded)
 			{
 				foreach (var error in result.Errors)
