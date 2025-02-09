@@ -34,6 +34,7 @@ namespace TemplatePustokApp.Models
         public List<BookTag> BookTags { get; set; }
         [NotMapped]
         public List<int> TagIds { get; set; }
+        public List<BookComment> BookComments { get; set; }
         public Book()
         {
             BookImages = new List<BookImage>();

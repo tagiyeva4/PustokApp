@@ -135,6 +135,7 @@ namespace TemplatePustokApp.Controllers
 				ModelState.AddModelError("", "Username or email or password is invalid..");
 				return View();
 			}
+			HttpContext.Response.Cookies.Append("basket", "");
 
 			return returnUrl!=null? Redirect(returnUrl): RedirectToAction("Index", "Home");
 		}

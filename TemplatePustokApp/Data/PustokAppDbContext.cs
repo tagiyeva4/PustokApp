@@ -19,6 +19,10 @@ namespace TemplatePustokApp.Data
         public DbSet<BookTag> BookTags { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
+        public DbSet<BookComment> BookComments { get; set; }
+        public DbSet<BasketItem> BasketItems { get; set; } 
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
 
     }
 }

@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\basket\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\basket\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\data\\pustokappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\data\\pustokappdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\shared\\_basketpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\shared\\_basketpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\services\\layoutservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\services\\layoutservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\wwwroot\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Basket\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Basket\\CheckOut.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Basket\\CheckOut.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Basket\\CheckOut.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T23:24:36.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PustokAppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Data\\PustokAppDbContext.cs",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Data\\PustokAppDbContext.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Data\\PustokAppDbContext.cs",
+              "RelativeToolTip": "TemplatePustokApp\\Data\\PustokAppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T23:19:40.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Models\\OrderItem.cs",
+              "RelativeToolTip": "TemplatePustokApp\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T23:17:12.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Models\\Order.cs",
+              "RelativeToolTip": "TemplatePustokApp\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T23:12:44.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Controllers\\BasketController.cs",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Controllers\\BasketController.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Controllers\\BasketController.cs",
+              "RelativeToolTip": "TemplatePustokApp\\Controllers\\BasketController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAGYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T20:57:23.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_BasketPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\_BasketPartial.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Shared\\_BasketPartial.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\_BasketPartial.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Shared\\_BasketPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T23:08:49.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "RelativeToolTip": "TemplatePustokApp\\wwwroot\\assets\\js\\main.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwEUAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-09T22:20:56.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAwwPoAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T20:01:25.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LayoutServices.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Services\\LayoutServices.cs",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Services\\LayoutServices.cs",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Services\\LayoutServices.cs",
+              "RelativeToolTip": "TemplatePustokApp\\Services\\LayoutServices.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwv1YAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T19:43:34.951Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

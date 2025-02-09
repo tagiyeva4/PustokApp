@@ -16,6 +16,7 @@ builder.Services.AddDbContext<PustokAppDbContext>(options =>
 {
     options.UseSqlServer(config["ConnectionStrings:DefaultConnection"]);
 });
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<LayoutServices>();
 builder.Services.Configure<JwtServiceOption>(config.GetSection("Jwt"));

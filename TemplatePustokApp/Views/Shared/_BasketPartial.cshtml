@@ -1,0 +1,33 @@
+﻿@model List<BasketItemVm>
+@if (Model.Count > 0)
+{
+    @foreach (var product in Model)
+{
+    <div class=" single-cart-block ">
+        <div class="cart-product">
+            <a href="product-details.html" class="image">
+                <img src="~/assets/image/products/@product.MainImage" alt="">
+            </a>
+            <div class="content">
+                <h3 class="title">
+                    <a asp-controller="Book" asp-action="detail" asp-route-id="@product.Id">
+                        @product.Name
+                    </a>
+                </h3>
+                <p class="price"><span class="qty">@product.Count ×</span> £@(product.Price * product.Count)</p>
+                <button class="cross-btn"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+}
+<div class=" single-cart-block ">
+    <div class="btn-block">
+        <a asp-action="Index" asp-controller="Basket" class="btn">
+            View Cart <i class="fas fa-chevron-right"></i>
+        </a>
+        <a href="checkout.html" class="btn btn--primary">
+            Check Out <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+</div>
+}

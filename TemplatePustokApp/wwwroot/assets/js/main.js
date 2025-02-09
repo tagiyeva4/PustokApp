@@ -44,12 +44,27 @@
 
     })
 
-    $(document).ready(function () {
         function removeMessage() {
             $(".alert.alert-success").remove();
         }
         setTimeout(removeMessage, 5000);
-    });
-   
+
+    //addBasket
+    $(".addBasket").click(function (ev) {
+        ev.preventDefault();
+        let url = $(this).attr("href");
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                $(".cart-dropdown-block.bbb").html(data);
+            })
+    })
+    
+    //$(document).on("click", ".addBasket", function (e) {
+    //    e.preventDefault();
+    //    let bookId = $(this).data("id");
+    //    let url = "/basket/add/" + bookId;
+    //    alert(url);
+    //});
     
 })
