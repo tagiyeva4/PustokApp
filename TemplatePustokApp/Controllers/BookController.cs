@@ -30,19 +30,27 @@ namespace TemplatePustokApp.Controllers
             }
            
             var user =await _userManager.GetUserAsync(User);
-            var vm = getBookDetailVm(id, user.Id);
-
-            if(vm.Book is null)
+            if (user != null)
             {
-                return NotFound();
-            }
+				var vm = getBookDetailVm((int)id, user.Id);
 
-            if (user == null||!await _userManager.IsInRoleAsync(user,"member"))
+				if (vm.Book is null)
+				{
+					return NotFound();
+				}
+				return View(vm);
+			}
+            else
             {
-                return RedirectToAction("Login", "Account", new {returnUrl=Url.Action("Detail","Book",id=(int)id)});
-            }
-           
-            return View(vm);
+				var vm = getBookDetailVm((int)id);
+
+				if (vm.Book is null)
+				{
+					return NotFound();
+				}
+				return View(vm);
+			}
+
         }
         public async Task<IActionResult> AddComment(BookComment bookComment)
         {
@@ -105,16 +113,42 @@ namespace TemplatePustokApp.Controllers
             return vm;
         }
 
+		private BookDetailVm getBookDetailVm(int? bookId)
+		{
+			var existBook = _context.Books
+			  .Include(b => b.Author)
+			  .Include(b => b.BookTags)
+			  .ThenInclude(bt => bt.Tag)
+			  .Include(b => b.Genre)
+			  .Include(b => b.BookImages)
+			  .Include(b => b.BookComments.Take(2))
+			  .ThenInclude(bc => bc.AppUser)
+			  .FirstOrDefault(x => x.Id == bookId);
+			//if (existBook == null)
+			//{
+			//    return NotFound();
+			//}
+
+			BookDetailVm vm = new BookDetailVm()
+			{
+				Book = existBook,
+				RelatedBooks = _context.Books
+				.Include(b => b.Author)
+				.Include(b => b.Genre)
+				.Include(b => b.BookImages)
+				.Where(x => x.Genre.Id == existBook.Genre.Id && x.Id != existBook.Id)
+				.Take(5)
+				.ToList(),
+				HasCommentUser = _context.BookComments.Any(x => x.BookId == existBook.Id  && x.Status != CommentStatus.Rejected),
+
+			};
+			vm.TotalCommentsCount = existBook.BookComments.Count(x => x.Id != existBook.Id);
+			vm.AvarageRate = vm.TotalCommentsCount > 0 ? (int)_context.BookComments.Where(x => x.BookId == existBook.Id).Average(x => x.Rate) : 0;
+			return vm;
+		}
 
 
-
-
-
-
-
-
-
-        public IActionResult Modal(int? id)
+		public IActionResult Modal(int? id)
         {
             if (id == null)
             {

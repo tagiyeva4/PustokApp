@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T09:06:51.392Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
