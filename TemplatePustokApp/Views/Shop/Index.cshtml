@@ -293,8 +293,8 @@
 								<p>
 									<input type="text" id="amount" readonly="">
 								</p>
-								<input type="hidden" form="shopForm" id="minPriceInput" name="minPrice" value="@ViewBag.MinPrice.ToString("0")" />
-								<input type="hidden" form="shopForm" id="maxPriceInput" name="maxPrice" value="@ViewBag.MaxPrice.ToString("0")" />
+								<input type="hidden" form="shopForm" id="minPriceInput" name="minPrice" value="@ViewBag.SelectedMaxPrice.ToString("0")" />
+								<input type="hidden" form="shopForm" id="maxPriceInput" name="maxPrice" value="@ViewBag.SelectedMinPrice.ToString("0")" />
 							</div>
 						</div>
 					</div>
@@ -331,23 +331,25 @@
 		</div>
 	</div>
 </main>
-<script>
-	/*-------------------------------------
-		   --> Range Slider
-	   ---------------------------------------*/
-	$(function () {
-		$(".sb-range-slider").slider({
-			range: true,
-			min: @ViewBag.MinPrice.ToString("0"),
-			max: @ViewBag.MaxPrice.ToString("0"),
-			values: [ViewBag.SelectedMinPrice.ToString("0"), ViewBag.SelectedMaxPrice.ToString("0")],
-			slide: function (event, ui) {
-				$("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
-				$("minPriceInput").val(ui.values[0])
-				$("maxPriceInput").val(ui.values[1])
-			}
+@section scripts{
+		<script>
+		/*-------------------------------------
+			   --> Range Slider
+		   ---------------------------------------*/
+		$(function () {
+			$(".sb-range-slider").slider({
+				range: true,
+				min: @ViewBag.MinPrice.ToString("0"),
+				max: @ViewBag.MaxPrice.ToString("0"),
+				values: [ViewBag.SelectedMinPrice.ToString("0"), ViewBag.SelectedMaxPrice.ToString("0")],
+				slide: function (event, ui) {
+					$("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
+					$("minPriceInput").val(ui.values[0])
+					$("maxPriceInput").val(ui.values[1])
+				}
+			});
+			$("#amount").val("£" + $(".sb-range-slider").slider("values", 0) +
+				" - £" + $(".sb-range-slider").slider("values", 1));
 		});
-		$("#amount").val("£" + $(".sb-range-slider").slider("values", 0) +
-			" - £" + $(".sb-range-slider").slider("values", 1));
-	});
-</script>
+	</script>
+}
