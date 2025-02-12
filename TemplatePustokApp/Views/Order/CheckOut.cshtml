@@ -1,0 +1,93 @@
+﻿@model CheckOutVm
+<section class="breadcrumb-section">
+    <h2 class="sr-only">Site Breadcrumb</h2>
+    <div class="container">
+        <div class="breadcrumb-contents">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li class="breadcrumb-item active">Checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<main id="content" class="page-section inner-page-sec-padding-bottom space-db--20">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Checkout Form s-->
+                <form method="post" id="checkoutForm" class="checkout-form">
+                    <div class="row row-40">
+
+                        <div class="col-lg-7 mb--20">
+                            <!-- Billing Address -->
+                            <div id="billing-form" class="mb-40">
+                                <h4 class="checkout-title">Billing Address</h4>
+                                <div class="row">
+                                    <div class="col-12 mb--20">
+                                        <label asp-for="@Model.OrderVm.Country"></label>
+                                        <input asp-for="@Model.OrderVm.Country" placeholder="Country">
+                                        <span class="text-danger" asp-validation-for="@Model.OrderVm.Country"></span>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb--20">
+                                        <label asp-for="@Model.OrderVm.Address"></label>
+                                        <input asp-for="@Model.OrderVm.Address" placeholder="Address line">
+                                        <span class="text-danger" asp-validation-for="@Model.OrderVm.Address"></span>
+                                    </div>
+                                    <div class="col-12 mb--20">
+                                        <label asp-for="@Model.OrderVm.TownCity"></label>
+                                        <input asp-for="@Model.OrderVm.TownCity" placeholder="Town/City">
+                                        <span class="text-danger" asp-validation-for="@Model.OrderVm.TownCity"></span>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb--20">
+                                        <label asp-for="@Model.OrderVm.State"></label>
+                                        <input asp-for="@Model.OrderVm.State" placeholder="State">
+                                        <span class="text-danger" asp-validation-for="@Model.OrderVm.State"></span>
+                                    </div>
+                                    <div class="col-md-6 col-12 mb--20">
+                                        <label asp-for="@Model.OrderVm.ZipCode"></label>
+                                        <input asp-for="@Model.OrderVm.ZipCode" placeholder="Zip Code">
+                                        <span class="text-danger" asp-validation-for="@Model.OrderVm.ZipCode"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="row">
+                                <!-- Cart Total -->
+                                <div class="col-12">
+                                    <div class="checkout-cart-total">
+                                        <h2 class="checkout-title">YOUR ORDER</h2>
+                                        <h4>Product <span>Total</span></h4>
+                                        <ul>
+
+                                            @foreach (var item in Model.CheckoutItemVms)
+                                            {
+                                                <li>
+                                                    <span class="left">@item.ProductName X 0@(item.Count)</span>
+                                                    <span class="right">$@item.TotalItemPrice</span>
+                                                </li>
+                                            }
+
+                                        </ul>
+                                        <p>Sub Total <span>$@(Model.CheckoutItemVms.Sum(b => b.TotalItemPrice))</span></p>
+                                        <p>Shipping Fee <span>$00.00</span></p>
+                                        <h4>Grand Total <span>$@(Model.CheckoutItemVms.Sum(b => b.TotalItemPrice))</span></h4>
+
+                                        <button type="submit" form="checkoutForm" class="place-order w-100">Place order</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js" integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}

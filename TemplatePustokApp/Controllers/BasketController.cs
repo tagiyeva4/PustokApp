@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
@@ -100,11 +101,7 @@ namespace TemplatePustokApp.Controllers
             return View(basketItemVms);
         }
 
-        public IActionResult CheckOut()
-        {
-            return View();
-        }
-
+       
 
         public IActionResult setItemCookies()
         {

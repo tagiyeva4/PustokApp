@@ -14,5 +14,13 @@ namespace TemplatePustokApp.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal TotalPrice { get; set; }
         public List<OrderItem> OrderItems { get; set; }
+        public OrderStatus OrderStatus { get; set; }
+    }
+    public enum OrderStatus
+    {
+        Pending,
+        Accepted,
+        Rejected,
+        Cancelled,
     }
 }

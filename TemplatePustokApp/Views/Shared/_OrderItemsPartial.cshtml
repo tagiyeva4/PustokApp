@@ -1,0 +1,30 @@
+﻿@model Order
+@{
+    int orderCount = 1;
+}
+<div class="modal-content">
+    <div class="myaccount-table table-responsive text-center">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var orderItem in Model.OrderItems)
+                {
+                    <tr>
+                        <td>@orderCount</td>
+                        <td>@orderItem.Book.Name</td>
+                        <td>@orderItem.Order.OrderStatus</td>
+                        <td>@orderItem.Count</td>
+                    </tr>
+                    orderCount++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

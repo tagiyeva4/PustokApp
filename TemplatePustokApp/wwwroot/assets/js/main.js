@@ -56,7 +56,7 @@
         fetch(url)
             .then(response => response.text())
             .then(data => {
-                $(".cart-dropdown-block.bbb").html(data);
+                $(".basketModal").html(data);
             })
     })
     
@@ -66,5 +66,22 @@
     //    let url = "/basket/add/" + bookId;
     //    alert(url);
     //});
+
+
+    $(".getorderitems").click(function (e) {
+        e.preventDefault();
+        let url = $(this).attr("href");
+        
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                $("#orderItemModal .modal-dialog").html(data);
+               
+
+            });
+        $("#orderItemModal").modal("show");
+
+
+    })
     
 })

@@ -308,7 +308,7 @@
 							<h2>Grand Total <span class="text-primary">$@Model.Sum(b => b.Count * b.Price)</span></h2>
 						</div>
 						<div class="cart-summary-button">
-							<a href="checkout.html" class="checkout-btn c-btn btn--primary">Checkout</a>
+							<a asp-action="CheckOut" asp-controller="Basket" class="checkout-btn c-btn btn--primary">Checkout</a>
 							<button class="update-btn c-btn btn-outlined">Update Cart</button>
 						</div>
 					</div>

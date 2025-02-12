@@ -14,6 +14,8 @@ using TemplatePustokApp.Services;
 using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using NuGet.Common;
+using TemplatePustokApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TemplatePustokApp.Controllers
 {
@@ -22,15 +24,17 @@ namespace TemplatePustokApp.Controllers
 		private readonly UserManager<AppUser> _userManager;
 		private readonly SignInManager<AppUser> _signInManager;
 		private readonly EmailService _emailService;
+		private readonly PustokAppDbContext	_pustokAppDbContext;
 
-		public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, EmailService emailService)
-		{
-			_userManager = userManager;
-			_signInManager = signInManager;
-			_emailService = emailService;
-		}
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, EmailService emailService, PustokAppDbContext pustokAppDbContext)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _emailService = emailService;
+            _pustokAppDbContext = pustokAppDbContext;
+        }
 
-		public IActionResult Register()
+        public IActionResult Register()
 		{
 			return View();
 		}
@@ -161,7 +165,10 @@ namespace TemplatePustokApp.Controllers
 				Email = user.Email,
 				FullName = user.UserName,
 			};
-
+			userprofileVm.Orders=_pustokAppDbContext.Orders
+				.Include(o=>o.AppUser)
+				.Where(o=>o.AppUserId==user.Id)
+				.ToList();	
 			return View(userprofileVm);
 		}
 		[HttpPost]
