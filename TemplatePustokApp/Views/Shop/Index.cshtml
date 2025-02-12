@@ -341,11 +341,11 @@
 				range: true,
 				min: @ViewBag.MinPrice.ToString("0"),
 				max: @ViewBag.MaxPrice.ToString("0"),
-				values: [ViewBag.SelectedMinPrice.ToString("0"), ViewBag.SelectedMaxPrice.ToString("0")],
+				values: [@ViewBag.SelectedMinPrice.ToString("0"), @ViewBag.SelectedMaxPrice.ToString("0")],
 				slide: function (event, ui) {
 					$("#amount").val("£" + ui.values[0] + " - £" + ui.values[1]);
-					$("minPriceInput").val(ui.values[0])
-					$("maxPriceInput").val(ui.values[1])
+					$("#minPriceInput").val(ui.values[0])
+					$("#maxPriceInput").val(ui.values[1])
 				}
 			});
 			$("#amount").val("£" + $(".sb-range-slider").slider("values", 0) +

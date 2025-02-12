@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|c:\\users\\asus\\source\\repos\\templatepustokapp\\templatepustokapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4C94166A-2AB5-4E3E-AF16-DCAA17C9123B}|TemplatePustokApp\\TemplatePustokApp.csproj|solutionrelative:templatepustokapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,6 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "TemplatePustokApp\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AgIAAD8BAAAAAAAAAAAgwE8BAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T09:44:31.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Asus\\source\\repos\\TemplatePustokApp\\TemplatePustokApp\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "TemplatePustokApp\\Views\\Account\\Login.cshtml",
